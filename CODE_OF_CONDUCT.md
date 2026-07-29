@@ -1,3 +1,3 @@
-# Code of Conduct for CALM Governance
+# Code of Conduct for the FINOS Architecture as Code Project
 
 Please see the [Community Code of Conduct](https://www.finos.org/code-of-conduct).

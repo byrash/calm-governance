@@ -1,59 +1,50 @@
 [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg)](https://community.finos.org/docs/governance/lifecycle-stages/incubating)
 
-# CALM Governance 
+# FINOS Architecture as Code (CALM) — Governance
 
-Short blurb about what your project does.
+This repository is the governance home for the FINOS Architecture as Code project, also known as CALM.
 
-## Installation
+It contains no code. Its purpose is to hold the project-wide governance documentation in a neutral location, so that no single code repository implies it is the "home" of the project. Every repository in the project defers to the documents here as the authoritative source.
 
-OS X & Linux:
+## Documents
 
-```sh
-npm install my-crazy-module --save
-```
+| Document | Purpose |
+|----------|---------|
+| [GOVERNANCE.md](GOVERNANCE.md) | Project governance policies — roles, contribution rules, Maintainer voting, and how Maintainers are added and removed. Applies to all repositories in the project. |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Project-wide contribution guidelines — how to raise issues, submit pull requests, and the responsible use of AI coding assistants. |
+| [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) | The Code of Conduct all participants are subject to. |
+| [MAINTAINERS.md](MAINTAINERS.md) | The current Maintainer roster for the project. |
+| [SECURITY.md](SECURITY.md) | How to report a security vulnerability. |
 
-Windows:
+The FINOS Technical Charter for the project will be published as a PDF at the root of this repository once FINOS has issued it. It defines mission, scope, IP and licensing, and takes precedence over the documents here.
 
-```sh
-edit autoexec.bat
-```
+## Project repositories
 
-## Usage example
+The project is organised across the following repositories:
 
-A few motivating and useful examples of how your project can be used. Spice this up with code blocks and potentially screenshots / videos ([LiceCap](https://www.cockos.com/licecap/) is great for this kind of thing).
+| Repository | Contents |
+|------------|----------|
+| [calm-governance](https://github.com/finos/calm-governance) | This repository. Project-wide governance, contribution guidelines, and Code of Conduct. |
+| [architecture-as-code](https://github.com/finos/architecture-as-code) | The main repository — CLI, server, shared libraries, data models, widgets, CALM Hub and its UI, the VS Code extension, and the documentation site. |
+| calm-schema | *Proposed.* The CALM Meta Schema, its documentation, and validation test suite. |
 
-_For more examples and usage, please refer to the [Wiki][wiki]._
+The restructure that introduces `calm-schema`, together with a proposed rename of the main repository to `calm` and of the FINOS project itself to CALM, is described in [architecture-as-code#2354](https://github.com/finos/architecture-as-code/issues/2354). Those are proposals under discussion — until FINOS approves the rename, the official project name remains "Architecture as Code".
 
-## Development setup
+## Proposing a governance change
 
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
+Governance changes are made in the open:
 
-```sh
-make install
-npm test
-```
+1. Open an [issue](https://github.com/finos/calm-governance/issues) describing the change you are proposing and the problem it addresses.
+2. Discuss it with the Maintainers and the wider community. Governance topics are also raised at the monthly community meetup and weekly Office Hours.
+3. Raise a pull request against the relevant document.
 
-## Roadmap
+Minutes of governance meetings are recorded as issues in this repository using the **Meeting Minutes** issue template, giving governance decisions a public record alongside the policies they change.
 
-List the roadmap steps; alternatively link the Confluence Wiki page where the project roadmap is published.
+Amendments to [GOVERNANCE.md](GOVERNANCE.md) require a vote of the Maintainers, following the Maintainer Voting process set out in that document. Changes to the Maintainer roster follow the process in [MAINTAINERS.md](MAINTAINERS.md).
 
-1. Item 1
-2. Item 2
-3. ....
+Security vulnerabilities must be reported privately rather than raised as issues — see [SECURITY.md](SECURITY.md).
 
-## Contributing
-For any questions, bugs or feature requests please open an [issue](https://github.com/finos/calm-governance/issues)
-For anything else please send an email to {project mailing list}.
-
-To submit a contribution:
-1. Fork it (<https://github.com/finos/calm-governance/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Read our [contribution guidelines](CONTRIBUTING.md) and [Community Code of Conduct](https://www.finos.org/code-of-conduct)
-4. Commit your changes (`git commit -am 'Add some fooBar'`)
-5. Push to the branch (`git push origin feature/fooBar`)
-6. Create a new Pull Request
-
-_NOTE:_ Pull requests must follow this repository’s contribution policy. FINOS projects typically use **DCO** (signed commits) and/or **CLA** via [EasyCLA](https://community.finos.org/docs/governance/Software-Projects/easycla), depending on configuration. Read [FINOS Contribution Requirements](https://community.finos.org/docs/governance/Software-Projects/contribution-compliance-requirements) and the [Technical Charter](technical-charter.pdf) example referenced from [CONTRIBUTING.md](CONTRIBUTING.md) before contributing.
+_NOTE:_ Pull requests must follow this repository’s contribution policy. FINOS projects typically use **DCO** (signed commits) and/or **CLA** via [EasyCLA](https://community.finos.org/docs/governance/Software-Projects/easycla), depending on configuration. Read [FINOS Contribution Requirements](https://community.finos.org/docs/governance/Software-Projects/contribution-compliance-requirements) before contributing.
 
 *Questions about CLA, DCO, or EasyCLA? Email [help@finos.org](mailto:help@finos.org)*
 

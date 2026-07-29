@@ -1,6 +1,6 @@
 name: 🤝 Meeting Minutes
-description: To track CALM Governance meeting agenda and attendance
-title: "DD MMM YYYY - CALM Governance Meeting Minutes"
+description: To track Architecture as Code governance meeting agenda and attendance
+title: "DD MMM YYYY - Governance Meeting Minutes"
 labels: ["meeting"]
 body:
   - type: markdown
