@@ -1,72 +1,128 @@
-# CALM Governance Contribution and Governance Policies
+# Contributing to the FINOS Architecture as Code Project
 
-This document describes the contribution process and governance policies of the FINOS CALM Governance project. The project is also governed by the [Linux Foundation Antitrust Policy](https://www.linuxfoundation.org/antitrust-policy/), and the FINOS [IP Policy](https://community.finos.org/governance-docs/IP-policy.pdf), [Code of Conduct](https://community.finos.org/docs/governance/code-of-conduct), [Collaborative Principles](https://community.finos.org/docs/governance/collaborative-principles/), and [Meeting Procedures](https://community.finos.org/docs/governance/meeting-procedures/).
+Thank you for your interest in contributing to the FINOS Architecture as Code project, also known as CALM.
+
+This document is the project-wide baseline for contributions and applies to every repository in the project. Individual code repositories add their own `CONTRIBUTING.md` covering repository-specific matters — build steps, test commands, and commit conventions — which supplement, rather than replace, the guidance here.
+
+The project's governance policies — the definitions of Contributor, Maintainer and Lead Maintainer, the contribution rules, Maintainer voting, and how Maintainers are added and removed — are set out in [GOVERNANCE.md](GOVERNANCE.md). That document also lists the Linux Foundation and FINOS policies the project operates under. The current Maintainer roster is in [MAINTAINERS.md](MAINTAINERS.md).
 
 ## Technical Charter
 
-After onboarding, FINOS publishes a **Technical Charter** for the project as a **PDF at the root of this repository**. That charter defines mission, scope, TSC structure, IP and licensing, and related governance—**do not duplicate that material here.**
+FINOS publishes a **Technical Charter** for the project as a PDF at the root of this repository. It defines mission, scope, IP and licensing, and related governance, and takes precedence over the documents in this repository. The charter has not yet been issued for this project; it will be added here when it is.
 
-For structure and wording, see this **[example Technical Charter (finos/5-spot)](https://github.com/finos/5-spot/blob/main/technical-charter.pdf)** until your own charter PDF is in the repo.
+## Contribution Requirements
+
+Contributions are accepted via git pull requests. Each commit must include a Developer Certificate of Origin sign-off line in the commit message:
+
+```
+Signed-off-by: GitHub User Name <your.email@example.com>
+```
+
+This sign-off means you agree the commit satisfies the [Developer Certificate of Origin (DCO)](https://developercertificate.org/). `git commit -s` adds it for you.
+
+Some repositories additionally require a CLA via [EasyCLA](https://community.finos.org/docs/governance/Software-Projects/easycla). Please read the [FINOS Contribution Requirements](https://community.finos.org/docs/governance/Software-Projects/contribution-compliance-requirements) before opening a pull request. Questions about CLA, DCO or EasyCLA can go to [help@finos.org](mailto:help@finos.org).
 
 ## Contribution Process
 
 Before making a contribution, please take the following steps:
+
 1. Check whether there's already an open issue related to your proposed contribution. If there is, join the discussion and propose your contribution there.
 2. If there isn't already a relevant issue, create one, describing your contribution and the problem you're trying to solve.
 3. Respond to any questions or suggestions raised in the issue by other developers.
 4. Fork the project repository and prepare your proposed contribution.
 5. Submit a pull request.
 
-NOTE: Contributors must meet FINOS **contribution requirements** (DCO, CLA, or other coverage as applicable to this repository). Please read [FINOS Contribution Requirements](https://community.finos.org/docs/governance/Software-Projects/contribution-compliance-requirements) before opening pull requests.
+## Contributing Issues
 
-## Governance
+### Prerequisites
 
-### Roles and charter-level governance
+* [ ] Have you searched the repository's existing issues for duplicates? A search for the exception message or a summary of the unexpected behaviour should suffice.
+* [ ] Are you running the latest version?
+* [ ] Are you sure this is a bug or a missing capability?
 
-Definitions of **Contributor**, **Maintainer**, **Lead Maintainer**, TSC responsibilities, and charter-level voting are in the **[Technical Charter](./technical_charter.pdf)**. The current Maintainer roster is listed in **[MAINTAINERS.md](./MAINTAINERS.md)**.
+### Raising an issue
 
-The project community consists of Contributors and Maintainers:
-* A **Contributor** is anyone who submits a contribution to the project. (Contributions may include code, issues, comments, documentation, media, or any combination of the above.)
-* A **Maintainer** is a Contributor who, by virtue of their contribution history, has been given write access to project repositories and may merge approved contributions.
-* The **Lead Maintainer** is the project's interface with the FINOS team and Board. They are responsible for approving [quarterly project reports](https://community.finos.org/docs/governance/#project-governing-board-reporting) and communicating on behalf of the project. The Lead Maintainer is elected by a vote of the Maintainers. 
+* Raise the issue on the repository the problem relates to. Governance matters belong here; code, documentation and schema matters belong on the relevant code repository.
+* Where the repository offers issue templates, pick the most appropriate one and fill it in.
+* Please use [Markdown formatting](https://help.github.com/categories/writing-on-github/) liberally to assist in readability. [Code fences](https://help.github.com/articles/creating-and-highlighting-code-blocks/) for exception stack traces and log entries, for example, massively improve readability.
 
-### Contribution Rules
+## Contributing Pull Requests
 
-Anyone is welcome to submit a contribution to the project. The rules below apply to all contributions. (The key words "MUST", "SHALL", "SHOULD", "MAY", etc. in this document are to be interpreted as described in [IETF RFC 2119](https://www.ietf.org/rfc/rfc2119.txt).)
+To make review of pull requests easier, please:
 
-* All contributions MUST be submitted as pull requests, including contributions by Maintainers.
-* All pull requests SHOULD be reviewed by a Maintainer (other than the Contributor) before being merged.
-* Pull requests for non-trivial contributions SHOULD remain open for a review period sufficient to give all Maintainers a sufficient opportunity to review and comment on them.
-* After the review period, if no Maintainer has an objection to the pull request, any Maintainer MAY merge it.
-* If any Maintainer objects to a pull request, the Maintainers SHOULD try to come to consensus through discussion. If not consensus can be reached, any Maintainer MAY call for a vote on the contribution.
+* Make sure your pull request will merge cleanly — pull requests that don't are unlikely to be accepted.
+* For code contributions, follow the existing code layout.
+* For documentation contributions, follow the general structure, language and tone of the existing documentation.
+* Keep commits small and cohesive — if you have multiple contributions, please submit them as independent commits, and ideally as independent pull requests too.
+* Reference issues if your pull request has anything to do with an issue, even if it doesn't address it.
+* Minimise non-functional changes, such as whitespace.
+* Ensure all new files include a header comment block containing the [Apache License v2.0 and your copyright information](http://www.apache.org/licenses/LICENSE-2.0#apply).
+* If necessary — for example, due to third-party dependency licensing requirements — update the repository's `NOTICE` file with any new attribution or other notices.
 
-### Maintainer Voting
+### Commit and pull request messages
 
-The Maintainers MAY hold votes only when they are unable to reach consensus on an issue. Any Maintainer MAY call a vote on a contested issue, after which Maintainers SHALL have 36 hours to register their votes. Votes SHALL take the form of "+1" (agree), "-1" (disagree), "+0" (abstain). Issues SHALL be decided by the majority of votes cast. If there is only one Maintainer, they SHALL decide any issue otherwise requiring a Maintainer vote. If a vote is tied, the Lead Maintainer MAY cast an additional tie-breaker vote.
+* Reference issues and pull requests liberally.
+* Use the present tense ("Add feature" not "Added feature").
+* Use the imperative mood ("Move button left..." not "Moves button left...").
+* Limit the first line to 72 characters or less.
 
-The Maintainers SHALL decide the following matters by consensus or, if necessary, a vote:
-* Contested pull requests
-* Election and removal of the Lead Maintainer
-* Election and removal of Maintainers
+Code repositories in this project enforce the [Conventional Commits](https://www.conventionalcommits.org/) specification, which drives automated versioning and changelog generation. See the `CONTRIBUTING.md` of the repository you are contributing to for its accepted commit types and scopes.
 
-All Maintainer votes MUST be carried out transparently, with all discussion and voting occurring in public, either:
-* in comments associated with the relevant issue or pull request, if applicable;
-* on the project mailing list or other official public communication channel; or
-* during a regular, minuted project meeting.
+## Responsible Use of AI Coding Assistants
 
-### Maintainer Qualifications
+This project welcomes the responsible use of AI coding assistants. They can accelerate learning, improve productivity, and help contributors understand the codebase, but AI-generated output should be treated as a draft, not a finished contribution. Contributors remain responsible for every change they submit.
 
-Any Contributor who has made a substantial contribution to the project MAY apply (or be nominated) to become a Maintainer. The existing Maintainers SHALL decide whether to approve the nomination according to the Maintainer Voting process above.
+### Understand Before You Submit
 
-### Maintainer List
+Do not submit code you cannot explain. Before opening a pull request, ensure you understand why the change is needed, how it works, its impact on the project, and how you verified that it behaves correctly.
 
-The current Maintainer roster is recorded in **[MAINTAINERS.md](./MAINTAINERS.md)**. All changes to the maintainer list are managed publicly:
+### Use AI as an Assistant, Not an Authority
 
-* Any addition, removal, or update MUST be submitted as a **pull request** to `MAINTAINERS.md`.
-* If the change requires a Maintainer vote (e.g. election or removal of a Maintainer or the Lead Maintainer), the vote outcome MUST be documented in, or linked from, the pull request description or comments.
-* This process creates a public audit trail of project leadership over time.
-* Whenever `MAINTAINERS.md` is updated with a change to maintainership, please email **help@finos.org**.
+Treat AI suggestions like code from any unfamiliar contributor. Review and validate them against the project's architecture, coding conventions, documentation, and testing practices rather than assuming they are correct because they compile or appear plausible.
 
-### Changes to this Document
+### Start With the Problem
 
-This document MAY be amended by a vote of the Maintainers according to the Maintainer Voting process above.
+Take time to understand the issue before asking AI to generate code. Focused prompts based on a clear understanding of the problem consistently produce better contributions than asking AI to implement an entire feature from scratch.
+
+### Keep Contributions Focused
+
+AI assistants often generate broader solutions than necessary. Keep pull requests narrowly focused on the problem being solved, minimize unrelated changes, and avoid introducing new abstractions or dependencies unless they are clearly justified.
+
+### Validate Every Change
+
+AI-generated code requires the same level of review and testing as any other contribution. Carefully review the complete diff, run the project's required validation steps, and ensure the implementation and tests accurately solve the intended problem.
+
+### Protect Sensitive Information
+
+Do not share credentials, confidential information, private repository content, or other sensitive data with AI services unless you are authorized to do so. Contributors are responsible for understanding the privacy and data-retention policies of the tools they use.
+
+### Verify, Don't Assume
+
+AI assistants can produce incorrect code, invent APIs, misinterpret project conventions, or generate flawed tests. Verify technical claims using authoritative sources and your own testing rather than relying solely on AI-generated responses.
+
+### Own Your Contribution
+
+AI can help draft code, but it cannot take responsibility for it. Be prepared to explain your design decisions, respond thoughtfully to maintainer feedback, and revise your implementation based on code review.
+
+### Contributor Responsibility
+
+By submitting a contribution, you confirm that you:
+
+1. Reviewed the complete change.
+2. Understand and can explain the implementation.
+3. Verified the change using the project's required validation steps.
+4. Considered security, privacy, licensing, and dependency implications.
+5. Accept responsibility for the entire contribution, including any AI-assisted portions.
+
+Maintainers may reject contributions that appear to be AI-generated but are not sufficiently understood, reviewed, or validated by the contributor.
+
+## Need Help?
+
+* For questions about a specific repository, open an issue there.
+* For questions about project governance, open an [issue in this repository](https://github.com/finos/calm-governance/issues).
+* Governance topics are also raised at the monthly community meetup and weekly Office Hours.
+* Security vulnerabilities must be reported privately — see [SECURITY.md](SECURITY.md).
+
+## Changes to this Document
+
+Amendments to this document follow the Maintainer Voting process described in [GOVERNANCE.md](GOVERNANCE.md).
