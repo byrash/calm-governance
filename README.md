@@ -26,9 +26,9 @@ The project is organised across the following repositories:
 |------------|----------|
 | [calm-governance](https://github.com/finos/calm-governance) | This repository. Project-wide governance, contribution guidelines, and Code of Conduct. |
 | [architecture-as-code](https://github.com/finos/architecture-as-code) | The main repository — CLI, server, shared libraries, data models, widgets, CALM Hub and its UI, the VS Code extension, and the documentation site. |
-| calm-schema | *Proposed.* The CALM Meta Schema, its documentation, and validation test suite. |
+| [calm-schema](https://github.com/finos/calm-schema) | The CALM Meta Schema, its documentation, and validation test suite. |
 
-The restructure that introduces `calm-schema`, together with a proposed rename of the main repository to `calm` and of the FINOS project itself to CALM, is described in [architecture-as-code#2354](https://github.com/finos/architecture-as-code/issues/2354). Those are proposals under discussion — until FINOS approves the rename, the official project name remains "Architecture as Code".
+A proposed rename of the main repository to `calm` and of the FINOS project itself to CALM is described in [architecture-as-code#2354](https://github.com/finos/architecture-as-code/issues/2354). That is a proposal under discussion — until FINOS approves the rename, the official project name remains "Architecture as Code".
 
 ## Proposing a governance change
 
